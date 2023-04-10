@@ -1,0 +1,37 @@
+#Snake Procession
+
+
+t=int(input())
+op=[]
+for i in range(t):
+    count1=0
+    count2=0
+    count=0
+    r=int(input())
+    l=[]
+    inp=input()
+    for i in inp:
+        if i!='.':
+            l.append(i)
+            if i=='H':
+                count1+=1 
+            else:
+                count2+=1
+                
+    if count1!=count2:
+        op.append("Invalid")
+    else:
+        for i in range(0,len(l)):
+            if i%2==0 and l[i]=="H":
+                count+=1
+            if i%2!=0 and l[i]=="T":
+                count+=1
+        if count==len(l):
+            op.append("Valid")
+        else:
+            op.append("Invalid")
+for i in op:
+    print(i)
+                    
+    
+    
